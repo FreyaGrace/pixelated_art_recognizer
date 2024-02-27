@@ -14,22 +14,19 @@ from sklearn.metrics import classification_report
 # Define the Streamlit app
 def app():
     
-    st.title('Symbol Classification')
-    st.subheader('by Louie F. Cervantes M.Eng., WVSU College of ICT')
+    st.title('Pixel Art Classification')
+    st.subheader('by Fatima Grace Apinan|| BSCS-3B || WVSU CICT')
     
     st.write('Dataset description:')
 
     st.write('Number of features: 64')
-    text = """Feature representation: Binary values (1 or 0) representing the 8x8 pixels of an image.
-        Target variable: A single categorical variable representing the class 
-        of the image (e.g., digit recognition, traffic sign classification).
-        Potential Applications:"""
+    text = """This code implements a logistic regression model to recognize pixel art images.
+    The dataset used consists of pixelated images represented as binary values (1 or 0) in an 8x8 grid, with each pixel indicating the presence or absence of a feature.
+    The target variable represents the class of the image, indicating the specific category or label associated with each image.
+    Features: """
     st.write(text)
-    st.write('Digit recognition: Identifying handwritten digits from 0-9.')
-    st.write('Traffic sign classification: Classifying different types of traffic signs.')
-    st.write('Character recognition: Recognizing characters from different alphabets.')
-    st.write("""Simple image classification: Classifying simple images into categories 
-             like animal/non-animal, vehicle/non-vehicle, etc.""")
+    st.write('Feature Representation: Binary values representing the 8x8 pixels of each image.')
+    st.write('Target Variable: Categorical variable representing the class of the image.')
 
     # display choice of classifier
     clf = BernoulliNB() 
