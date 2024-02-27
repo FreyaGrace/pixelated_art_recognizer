@@ -20,7 +20,7 @@ def app():
     st.write('Dataset description:')
 
     st.write('Number of features: 64')
-    text = """This code implements a logistic regression model to recognize pixel art images.
+    text = """This app implements a logistic regression model and naive bayes model to recognize pixel art images.
     The dataset used consists of pixelated images represented as binary values (1 or 0) in an 8x8 grid, with each pixel indicating the presence or absence of a feature.
     The target variable represents the class of the image, indicating the specific category or label associated with each image.
     Features: """
@@ -40,7 +40,7 @@ def app():
         clf = BernoulliNB()
 
     if st.button('Start'):
-        df = pd.read_csv('Arendain_Smiley.csv', header=None)
+        df = pd.read_csv('symbols.csv', header=None)
         # st.dataframe(df, use_container_width=True)  
         
         # display the dataset
